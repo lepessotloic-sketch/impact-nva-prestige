@@ -1,36 +1,532 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<title>Impact‑NVA – Le digital au service des paysagistes</title>
-<meta name="description" content="Sites internet professionnels pour paysagistes : design premium, livraison 48h, offre de lancement 390 € au lieu de 590 €." />
-<meta property="og:image" content="assets/images/hero.jpg" /></head><body><header>
-  <a class="nav-logo" href="index.html"><img src="assets/images/logo-impact.png" alt="Impact‑NVA" style="height:80px;width:auto;"></a>
-  <nav>
-    <div class="nav-toggle"><i class="fas fa-bars"></i></div>
-    <div class="nav-links">
-      <a class="active" href="index.html">Accueil</a>
-      <a class="" href="offer.html">Offre</a>
-      <a class="" href="examples.html">Réalisations</a>
-      <a class="" href="process.html">Processus</a>
-      <a class="" href="faq.html">FAQ</a>
-      <a class="" href="contact.html">Contact</a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact-NVA — Sites internet premium pour paysagistes, en ligne en 48 h</title>
+  <meta name="description" content="Impact-NVA crée des sites internet haut de gamme pour paysagistes, élagueurs et entreprises d'espaces verts. Votre site en ligne 48 h après réception de vos éléments. 390 € en offre de lancement, sans abonnement caché.">
+  <link rel="canonical" href="https://prestige.impact-nva.fr/">
+  <meta name="theme-color" content="#0A0F0C">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Impact-NVA — Sites internet premium pour paysagistes">
+  <meta property="og:description" content="Votre savoir-faire mérite plus qu'un simple site internet. En ligne 48 h après réception de vos éléments.">
+  <meta property="og:url" content="https://prestige.impact-nva.fr/">
+  <meta property="og:image" content="https://prestige.impact-nva.fr/assets/icons/icon-512.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/playfair-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
+
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      var saved = null;
+      try { saved = localStorage.getItem('inva-theme'); } catch (e) {}
+      var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'jour' : 'nuit');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Impact-NVA",
+    "url": "https://prestige.impact-nva.fr/",
+    "logo": "https://prestige.impact-nva.fr/assets/images/logo-impact.png",
+    "description": "Création de sites internet premium pour paysagistes, élagueurs et entreprises d'espaces verts. Site en ligne 48 h après réception des éléments.",
+    "email": "contact@impact-nva.fr",
+    "areaServed": "FR",
+    "priceRange": "390€-590€"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Combien coûte un site Impact-NVA ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "L'offre V2 Prestige est à 390 € au lieu de 590 € pendant la période de lancement. C'est un paiement unique et sécurisé par Stripe, sans abonnement caché. Seul le nom de domaine (10 à 15 € par an chez OVH) reste à votre charge, et il est enregistré à votre nom." }
+      },
+      {
+        "@type": "Question",
+        "name": "En combien de temps mon site est-il en ligne ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Votre site est en ligne 48 h après réception de vos éléments : vos photos, vos coordonnées et quelques informations sur votre activité. On s'occupe de tout le reste." }
+      },
+      {
+        "@type": "Question",
+        "name": "Je n'y connais rien en informatique, c'est un problème ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Aucun. Vous n'avez rien à installer, rien à gérer, rien à apprendre. Vous nous envoyez vos photos et vos informations, on fait le reste, et votre site fonctionne tout seul." }
+      },
+      {
+        "@type": "Question",
+        "name": "Le nom de domaine m'appartient-il vraiment ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Votre nom de domaine est acheté chez OVH et enregistré à votre nom, pas au nôtre. Si un jour vous voulez partir, il vous suit. Vous restez propriétaire de votre adresse." }
+      },
+      {
+        "@type": "Question",
+        "name": "Et si je n'ai pas de belles photos de mes chantiers ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "C'est fréquent, et ce n'est pas bloquant. On vous guide pour prendre quelques photos simples avec votre téléphone, et on les met en valeur dans le site. Des photos authentiques de vos chantiers convainquent plus que des images de banque d'images." }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourrai-je faire évoluer mon site plus tard ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Vous pouvez faire ajouter de nouvelles réalisations, de nouveaux avis ou de nouvelles pages quand vous le souhaitez. Et si votre activité grandit, votre site peut évoluer vers la version Signature sans repartir de zéro." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header" id="haut">
+  <div class="header-inner">
+    <a class="brand" href="#haut" aria-label="Impact-NVA, retour en haut de page">
+      <img class="brand-logo" src="assets/images/logo-impact.png" alt="Impact-NVA" width="220" height="240">
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#difference">La différence</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#deroule">Le déroulé</a></li>
+        <li><a href="#offre">L'offre</a></li>
+        <li><a href="#questions">Questions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Basculer entre le mode jour et le mode nuit">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M18.7 5.3 17 7M7 17l-1.7 1.7"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.2A8.2 8.2 0 0 1 9.8 3.8a8.2 8.2 0 1 0 10.4 10.4Z"/></svg>
+      </button>
+      <a class="cta-button header-cta" href="#contact">Demander mon site</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </nav>
-</header><main>
-<section class="hero"><div class="container hero-grid reveal"><div><div class="eyebrow">Impact‑NVA · Sites pour paysagistes</div><h1 class="hero-title">Le digital au service des <span>paysagistes.</span></h1><p class="hero-subtitle">Votre site internet professionnel, livré en 48h. Pensé pour valoriser vos réalisations, rassurer vos prospects et déclencher plus de demandes.</p><div class="hero-actions"><a class="cta-button" href="offer.html">Obtenir mon site</a><a class="ghost-button" href="#before-after">Voir les avant / après</a></div><div class="stat-band"><div class="stat"><strong>48h</strong><span>livraison après réception des éléments</span></div><div class="stat"><strong>390 €</strong><span>au lieu de 590 €</span></div><div class="stat"><strong>30</strong><span>premiers clients uniquement</span></div></div></div><aside class="hero-card"><div class="eyebrow">V2&nbsp;Prestige</div><div class="price-row"><div class="price">390&nbsp;€</div><div class="old-price">590&nbsp;€</div></div><p class="limited">OFFRE DE LANCEMENT&nbsp;– Réservée aux&nbsp;30&nbsp;premiers&nbsp;clients.</p><div class="mini-list"><span>✓&nbsp;Site&nbsp;multipages</span><span>✓&nbsp;Google&nbsp;Maps&nbsp;intégré</span><span>✓&nbsp;Avis&nbsp;Google&nbsp;intégrés</span><span>✓&nbsp;Paiement&nbsp;sécurisé&nbsp;Stripe</span></div></aside></div></section>
-<section class="section"><div class="container reveal center"><div class="eyebrow">Pourquoi maintenant</div><h2 class="section-title">Votre savoir-faire mérite une vitrine claire.</h2><p class="section-lead">Un prospect qui cherche un paysagiste compare vite : photos, sérieux, avis, facilité de contact. Impact‑NVA transforme cette première impression en demande de devis.</p><div class="card-grid"><div class="card"><div class="card-icon"><i class="fas fa-search"></i></div><h3 class="card-title">Être trouvé</h3><p class="card-desc">Un site propre donne une base solide à votre visibilité locale.</p></div><div class="card"><div class="card-icon"><i class="fas fa-images"></i></div><h3 class="card-title">Montrer vos chantiers</h3><p class="card-desc">Vos photos deviennent vos meilleurs arguments commerciaux.</p></div><div class="card"><div class="card-icon"><i class="fas fa-handshake"></i></div><h3 class="card-title">Inspirer confiance</h3><p class="card-desc">Un design soigné rassure avant même le premier appel.</p></div><div class="card"><div class="card-icon"><i class="fas fa-paper-plane"></i></div><h3 class="card-title">Recevoir des demandes</h3><p class="card-desc">Un parcours simple pousse naturellement vers le contact.</p></div></div></div></section>
-<section id="realisations" class="section"><div class="container reveal"><div class="eyebrow">Réalisations</div><h2 class="section-title">Des images qui respirent le travail bien fait.</h2><p class="section-lead">Cette section montre des réalisations finies : entretien, taille, espaces propres, jardins valorisés. Les avant/après sont séparés plus bas pour raconter la transformation.</p><div class="gallery-premium"><div class="project-card large"><img loading="lazy" src="assets/images/realisation-grand-jardin.jpg" alt="Grand jardin entretenu"><div class="project-caption"><strong>Grand jardin entretenu</strong><span>Tonte, volumes propres et espace lisible</span></div></div><div class="project-card"><img loading="lazy" src="assets/images/realisation-jardin-entretenu.jpg" alt="Jardin entretenu avec topiaire"><div class="project-caption"><strong>Jardin entretenu</strong><span>Massifs et taille décorative</span></div></div><div class="project-card"><img loading="lazy" src="assets/images/realisation-taille-architecturale.jpg" alt="Taille architecturale"><div class="project-caption"><strong>Taille architecturale</strong><span>Volume net et forme maîtrisée</span></div></div><div class="project-card wide"><img loading="lazy" src="assets/images/realisation-terrasse-piscine.jpg" alt="Terrasse et jardin"><div class="project-caption"><strong>Terrasse & jardin</strong><span>Un extérieur structuré et accueillant</span></div></div></div></div></section>
-<section id="before-after" class="section ba-section"><div class="container reveal"><div class="eyebrow">Avant / Après</div><h2 class="section-title">La transformation visible en une seconde.</h2><p class="section-lead">Ici, on montre uniquement les transformations : avant intervention puis résultat fini. C’est la preuve visuelle qui aide un futur client à se projeter.</p><div class="ba-showcase"><article class="ba-card"><div class="ba-slider"><img class="ba-before" src="assets/images/avant-terrasse.jpg" alt="Avant entretien terrasse et haie"><div class="ba-after-wrapper"><img class="ba-after" src="assets/images/realisation-terrasse-haie.jpg" alt="Après entretien terrasse et haie"></div><span class="ba-label before">AVANT</span><span class="ba-label after">APRÈS</span><span class="ba-handle">↔</span><input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Comparer avant après"></div><div class="ba-content"><h3>Haie structurée & espace plus lisible</h3><p>Le slider met en avant le passage d’un espace chargé à une zone plus nette, plus propre et plus agréable à regarder.</p></div></article><article class="ba-card"><div class="ba-slider"><img class="ba-before" src="assets/images/avant-massif.jpg" alt="Avant massif"><div class="ba-after-wrapper"><img class="ba-after" src="assets/images/realisation-massif-fleuri.jpg" alt="Après massif fleuri"></div><span class="ba-label before">AVANT</span><span class="ba-label after">APRÈS</span><span class="ba-handle">↔</span><input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Comparer avant après"></div><div class="ba-content"><h3>Massif fleuri & finition soignée</h3><p>Les couleurs, les volumes et la propreté du résultat deviennent immédiatement visibles.</p></div></article></div></div></section>
-<section class="section"><div class="container reveal"><div class="offer-box"><div class="price-card"><div class="eyebrow">OFFRE DE LANCEMENT</div><h2 class="section-title">390 € <span class="old-price">590 €</span></h2><p class="limited">Réservée aux&nbsp;30&nbsp;premiers&nbsp;clients.</p><p>Après cette période de lancement, l’offre V2 Prestige passera à 590 €.</p><a class="cta-button" href="contact.html">Réserver mon site</a></div><div><h2 class="section-title">Inclus dans votre site</h2><ul class="included"><li>Site multipages</li><li>Google&nbsp;Maps intégré</li><li>Avis&nbsp;Google intégrés</li><li>Paiement sécurisé Stripe</li><li>Hébergement GitHub Pages offert</li><li>Nom de domaine acheté chez OVH</li><li>Domaine enregistré au nom du client</li><li>Prix du domaine&nbsp;: 10&nbsp;€ à&nbsp;15&nbsp;€ par an</li><li>Ajout de nouvelles réalisations&nbsp;: 10&nbsp;€/mois</li><li>Support prioritaire</li></ul><div class="note-box">Vous achetez votre nom de domaine chez OVH. Il reste enregistré à votre nom. L’hébergement GitHub Pages est offert.</div></div></div></div></section>
-<section class="section compact"><div class="container reveal center"><h2 class="section-title">Une vitrine simple, propre, efficace.</h2><p class="section-lead">La future offre Premium ira beaucoup plus loin. Cette version V2 Prestige reste volontairement claire : elle doit convertir rapidement, sans surcharger l’artisan.</p><a href="offer.html" class="ghost-button">Voir l’offre en détail</a></div></section>
-</main><footer>
-  <div class="footer-content">
-    <div class="footer-col"><h4>Impact‑NVA</h4><p>Le digital au service des paysagistes. Sites rapides, élégants et pensés pour générer des demandes.</p></div>
-    <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="offer.html">Offre</a></li><li><a href="examples.html">Réalisations</a></li><li><a href="process.html">Processus</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:contact@impact-nva.fr">contact@impact-nva.fr</a></li><li>Zone&nbsp;: France</li><li>Toutes les demandes passent par le formulaire</li><li>Paiement sécurisé Stripe</li><li>Hébergement GitHub Pages offert</li><li>Nom de domaine acheté chez OVH</li><li>Environ 10&nbsp;€ à&nbsp;15&nbsp;€/an</li></ul></div>
   </div>
-  <div class="footer-bottom">© 2026 Impact‑NVA. Tous droits réservés.</div>
+</header>
+
+<main id="contenu">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">Sites internet premium pour paysagistes</p>
+        <h1 class="hero-title">Votre savoir-faire <span class="hero-accent">mérite</span> plus qu'un simple site internet.</h1>
+        <p class="hero-subtitle">Nous créons des sites qui montrent la qualité de votre travail et donnent envie de vous appeler. En ligne 48&nbsp;h après réception de vos éléments.</p>
+        <div class="hero-actions">
+          <a class="cta-button" href="#contact">Demander mon site</a>
+          <a class="ghost-button" href="#difference">Voir la différence</a>
+        </div>
+        <dl class="hero-marks" aria-label="Repères clés">
+          <div class="mark"><dt>48&nbsp;h</dt><dd>pour être en ligne</dd></div>
+          <div class="mark"><dt>390&nbsp;€</dt><dd>au lieu de 590&nbsp;€</dd></div>
+          <div class="mark"><dt>30</dt><dd>premiers clients seulement</dd></div>
+        </dl>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="hero-orbits" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+          <circle cx="300" cy="300" r="286" stroke="currentColor" stroke-width="1" stroke-dasharray="420 1380" stroke-linecap="round"/>
+          <circle cx="300" cy="300" r="286" stroke="currentColor" stroke-width="1" stroke-dasharray="160 1640" stroke-dashoffset="-900" stroke-linecap="round" opacity=".55"/>
+          <circle cx="300" cy="300" r="238" stroke="currentColor" stroke-width="1" stroke-dasharray="300 1200" stroke-dashoffset="-400" stroke-linecap="round" opacity=".4"/>
+        </svg>
+        <img src="assets/images/logo-sans-fond.png" alt="" width="540" height="590" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BANDE CONFIANCE ============ -->
+  <section class="trust-band" aria-label="Ce qui nous distingue">
+    <div class="container">
+      <ul class="trust-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c-4.5 5-7 7.6-7 11a7 7 0 0 0 14 0c0-3.4-2.5-6-7-11Z"/><path d="M12 17.5c2 0 3.5-1.5 3.5-3.5"/></svg>
+          <span>Sur-mesure pour votre métier</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2.2"/></svg>
+          <span>En ligne en 48&nbsp;h</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 5.8v5.4c0 4.3 3 8.1 7 9.3 4-1.2 7-5 7-9.3V5.8L12 3Z"/><path d="m9.2 12 2 2 3.6-3.8"/></svg>
+          <span>Paiement sécurisé Stripe</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18.5c0-3 3.6-4.5 8-4.5s8 1.5 8 4.5"/><circle cx="12" cy="8" r="3.8"/></svg>
+          <span>Un humain qui vous suit</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6.5 19V9.5l5.5-4 5.5 4V19"/><path d="M10 19v-4.5h4V19"/></svg>
+          <span>Un site fait pour durer</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ PROBLÈME → PROMESSE ============ -->
+  <section class="section section-pitch">
+    <div class="container narrow reveal">
+      <h2 class="section-title">Vos chantiers parlent pour vous.<br>Votre site, lui, vous dessert peut-être.</h2>
+      <p class="section-lead">Aujourd'hui, un futur client vous cherche sur Google avant de vous appeler. S'il tombe sur un site vieillissant, ou sur rien du tout, il passe au paysagiste suivant. Pas parce que vous travaillez mal&nbsp;: parce qu'il ne peut pas le voir.</p>
+      <p class="section-lead strong">Voici ce que ça change, concrètement.</p>
+    </div>
+  </section>
+
+  <!-- ============ AVANT / APRÈS ============ -->
+  <section class="section ba-section" id="difference">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="section-title">Faites glisser.<br>La transformation saute aux yeux.</h2>
+        <p class="section-lead">De vraies réalisations, avant et après notre passage. C'est exactement ce type de transformation que votre site mettra en valeur pour convaincre vos futurs clients.</p>
+      </div>
+
+      <div class="ba-showcase">
+
+        <figure class="ba-card">
+          <div class="ba-slider">
+            <div class="ba-old">
+              <img loading="lazy" src="assets/images/avant-terrasse.jpg" width="1200" height="801" alt="Terrasse et haie avant l'intervention : végétation dense et peu structurée">
+            </div>
+            <div class="ba-new">
+              <img loading="lazy" src="assets/images/realisation-terrasse-haie.jpg" width="1200" height="801" alt="La même terrasse après : haie sculptée et espace net et structuré">
+            </div>
+            <span class="ba-label ba-label-old" aria-hidden="true">Avant</span>
+            <span class="ba-label ba-label-new" aria-hidden="true">Après</span>
+            <div class="ba-handle" aria-hidden="true"><span class="ba-handle-grip"></span></div>
+            <input type="range" class="ba-range" min="0" max="100" value="50" step="0.1" aria-label="Comparer l'avant et l'après de la terrasse et de la haie">
+          </div>
+          <figcaption>Terrasse &amp; haie — d'un espace touffu à une ligne nette et maîtrisée.</figcaption>
+        </figure>
+
+        <figure class="ba-card">
+          <div class="ba-slider">
+            <div class="ba-old">
+              <img loading="lazy" src="assets/images/avant-massif.jpg" width="1200" height="801" alt="Jardin avec massif avant l'intervention : haies irrégulières">
+            </div>
+            <div class="ba-new">
+              <img loading="lazy" src="assets/images/realisation-massif-fleuri.jpg" width="1200" height="801" alt="Le même jardin après : haies sculptées et massif fleuri mis en valeur">
+            </div>
+            <span class="ba-label ba-label-old" aria-hidden="true">Avant</span>
+            <span class="ba-label ba-label-new" aria-hidden="true">Après</span>
+            <div class="ba-handle" aria-hidden="true"><span class="ba-handle-grip"></span></div>
+            <input type="range" class="ba-range" min="0" max="100" value="50" step="0.1" aria-label="Comparer l'avant et l'après du massif fleuri">
+          </div>
+          <figcaption>Massif &amp; volumes — des haies remises en forme et un jardin qui respire.</figcaption>
+        </figure>
+
+      </div>
+      <p class="ba-hint">Déplacez le curseur pour révéler l'après. Ces transformations sont de vraies réalisations.</p>
+    </div>
+  </section>
+
+  <!-- ============ BÉNÉFICES ============ -->
+  <section class="section section-benefits">
+    <div class="container">
+      <div class="benefits-grid reveal">
+        <div class="benefit-intro">
+          <h2 class="section-title">Un bon site ne fait pas que « faire joli ».</h2>
+          <p class="section-lead">Il travaille pour vous, tous les jours, même quand vous êtes sur un chantier.</p>
+        </div>
+        <ol class="benefit-list">
+          <li>
+            <h3>On vous trouve</h3>
+            <p>Votre site donne une adresse solide à votre réputation. Quand on parle de vous, on peut enfin vous chercher — et vous trouver.</p>
+          </li>
+          <li>
+            <h3>On vous fait confiance</h3>
+            <p>Des photos soignées, des avis visibles, des informations claires&nbsp;: le futur client est rassuré avant même le premier appel.</p>
+          </li>
+          <li>
+            <h3>On vous écrit</h3>
+            <p>Un parcours simple mène naturellement à la demande de devis. Votre téléphone sonne pour de bonnes raisons.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RÉALISATIONS & PREUVES ============ -->
+  <section class="section" id="realisations">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="section-title">Des sites qui respirent le travail bien fait.</h2>
+        <p class="section-lead">Un aperçu du niveau de finition que nous visons — ici, un exemple réalisé pour un paysagiste.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g-item g-tall">
+          <img loading="lazy" src="assets/images/realisation-grand-jardin.jpg" width="1200" height="900" alt="Grand jardin entretenu par un paysagiste, pelouse impeccable et volumes taillés">
+          <figcaption>Grand jardin entretenu</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img loading="lazy" src="assets/images/realisation-taille-architecturale.jpg" width="900" height="1200" alt="Taille architecturale d'un arbuste, forme nette et maîtrisée">
+          <figcaption>Taille architecturale</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img loading="lazy" src="assets/images/realisation-massif-fleuri.jpg" width="1200" height="900" alt="Massif fleuri aux finitions soignées">
+          <figcaption>Massif fleuri</figcaption>
+        </figure>
+        <figure class="g-item g-wide">
+          <img loading="lazy" src="assets/images/realisation-terrasse-haie.jpg" width="1200" height="900" alt="Terrasse bordée d'une haie parfaitement structurée">
+          <figcaption>Terrasse &amp; haie structurée</figcaption>
+        </figure>
+      </div>
+
+      <div class="proof-strip" id="proof-stats" hidden>
+        <!-- Rempli automatiquement depuis config.js quand des statistiques sont disponibles -->
+      </div>
+
+      <div class="reviews" id="proof-reviews" hidden>
+        <!-- Rempli automatiquement depuis config.js quand des avis clients sont disponibles -->
+      </div>
+
+      <ul class="guarantees">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8.5 12.2 2.3 2.3 4.7-5"/></svg>
+          <div><strong>Domaine à votre nom</strong><span>Votre adresse vous appartient, chez OVH.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 5.8v5.4c0 4.3 3 8.1 7 9.3 4-1.2 7-5 7-9.3V5.8L12 3Z"/></svg>
+          <div><strong>Paiement sécurisé</strong><span>Règlement unique via Stripe.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 9 17l10.5-10.5"/></svg>
+          <div><strong>Sans engagement</strong><span>Pas d'abonnement obligatoire, pas de piège.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-7-10a4.1 4.1 0 0 1 7-2.9A4.1 4.1 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg>
+          <div><strong>Hébergement offert</strong><span>Aucun frais de serveur à prévoir.</span></div>
+        </li>
+      </ul>
+
+      <div class="partners">
+        <p class="partners-label">Votre site repose sur des services reconnus et fiables</p>
+        <ul class="partners-logos">
+          <li class="partner">
+            <svg class="partner-github" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            <span class="partner-name">GitHub</span>
+            <span class="partner-role">Hébergement</span>
+          </li>
+          <li class="partner">
+            <img class="partner-img" src="assets/images/logo-ovh.png" alt="OVHcloud" width="960" height="152">
+            <span class="partner-role">Nom de domaine</span>
+          </li>
+          <li class="partner">
+            <img class="partner-img partner-stripe" src="assets/images/logo-stripe.png" alt="Stripe" width="960" height="400">
+            <span class="partner-role">Paiement sécurisé</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESSUS ============ -->
+  <section class="section section-process" id="deroule">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="section-title">Quatre étapes, zéro jargon.</h2>
+        <p class="section-lead">Vous restez concentré sur vos chantiers. Nous nous occupons de tout le reste.</p>
+      </div>
+      <ol class="process">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Vous nous écrivez</h3>
+          <p>Le formulaire en bas de page prend deux minutes. Vous recevez une réponse sous 24&nbsp;h ouvrées.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>On échange</h3>
+          <p>Par téléphone ou par écrit&nbsp;: votre métier, vos clients, ce que vous voulez montrer. Sans engagement.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>On crée votre site</h3>
+          <p>Textes, mise en page, couleurs, photos&nbsp;: nous façonnons un site à l'image de votre travail.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">4</span>
+          <h3>Vous êtes en ligne</h3>
+          <p>48&nbsp;h après réception de vos éléments, votre site est en ligne et travaille pour vous.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ OFFRE ============ -->
+  <section class="section section-offer" id="offre">
+    <div class="container reveal">
+      <div class="offer-grid">
+        <div class="offer-pitch">
+          <h2 class="section-title">Un prix clair.<br>Un site qui vous appartient.</h2>
+          <p class="section-lead">Pas d'abonnement obligatoire, pas de frais surprises. Vous payez une fois, votre site est à vous, et votre nom de domaine est enregistré à votre nom.</p>
+          <ul class="offer-included">
+            <li>Site complet à l'image de votre métier</li>
+            <li>Textes rédigés pour vous, sans jargon</li>
+            <li>Vos réalisations mises en valeur</li>
+            <li>Google Maps et avis Google intégrables</li>
+            <li>Pensé pour le téléphone d'abord</li>
+            <li>Hébergement offert, sans frais de serveur</li>
+            <li>Nom de domaine OVH enregistré à votre nom <span class="offer-note">(10 à 15&nbsp;€/an)</span></li>
+            <li>Ajout de réalisations quand vous voulez <span class="offer-note">(option 10&nbsp;€/mois)</span></li>
+          </ul>
+        </div>
+        <aside class="offer-card" aria-label="Offre V2 Prestige">
+          <p class="offer-flag">Offre de lancement</p>
+          <p class="offer-name">V2&nbsp;Prestige</p>
+          <p class="offer-price"><span class="price-now">390&nbsp;€</span> <s class="price-old">590&nbsp;€</s></p>
+          <p class="offer-save">Vous économisez 200&nbsp;€</p>
+          <p class="offer-scarcity">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18.5c0-2.6 2.9-4 6.5-4s6.5 1.4 6.5 4"/><circle cx="10.5" cy="8.2" r="3.4"/><path d="M17 11.5c1.9.4 3.5 1.6 3.5 3.4"/><circle cx="16.6" cy="7" r="2.5"/></svg>
+            Réservée aux 30&nbsp;premiers clients
+          </p>
+          <ul class="offer-terms-list">
+            <li>Paiement unique, sécurisé par Stripe</li>
+            <li>Aucun abonnement</li>
+            <li>Le tarif repassera ensuite à 590&nbsp;€</li>
+          </ul>
+          <a class="cta-button" href="#contact">Je réserve ma place</a>
+          <p class="offer-reassure">Paiement sécurisé via Stripe. Après votre commande, nous vous envoyons les informations nécessaires pour démarrer la création de votre site.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section-faq" id="questions">
+    <div class="container narrow reveal">
+      <div class="section-head">
+        <h2 class="section-title">Vos questions, sans détour.</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Combien ça coûte, au total&nbsp;?</summary>
+          <div class="faq-body"><p>390&nbsp;€ au lieu de 590&nbsp;€ pendant l'offre de lancement, en un seul paiement sécurisé par Stripe. Ensuite, seul votre nom de domaine reste à votre charge&nbsp;: 10 à 15&nbsp;€ par an chez OVH, à votre nom. Aucun abonnement obligatoire.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>En combien de temps mon site est-il en ligne&nbsp;?</summary>
+          <div class="faq-body"><p>48&nbsp;h après réception de vos éléments&nbsp;: vos photos, vos coordonnées et quelques informations sur votre activité. C'est la seule chose qu'on vous demande — le reste, on s'en occupe.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Je n'y connais rien en informatique. C'est un problème&nbsp;?</summary>
+          <div class="faq-body"><p>Aucun. Vous n'avez rien à installer, rien à gérer, rien à apprendre. Votre site fonctionne tout seul, et quand vous voulez y changer quelque chose, vous nous écrivez.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Le nom de domaine m'appartient-il vraiment&nbsp;?</summary>
+          <div class="faq-body"><p>Oui, et c'est important. Votre domaine est acheté chez OVH et enregistré à votre nom, pas au nôtre. Si un jour vous voulez partir, votre adresse vous suit. Beaucoup d'agences gardent le domaine pour retenir leurs clients — pas nous.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Et si je n'ai pas de belles photos de mes chantiers&nbsp;?</summary>
+          <div class="faq-body"><p>C'est le cas de la plupart de nos clients, et ce n'est pas bloquant. On vous guide pour prendre quelques photos simples avec votre téléphone, et on les met en valeur. De vraies photos de vos chantiers convainquent bien plus que des images génériques.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Mon site pourra-t-il évoluer plus tard&nbsp;?</summary>
+          <div class="faq-body"><p>Oui. Vous pouvez faire ajouter des réalisations, des avis ou des pages quand vous le souhaitez. Et si votre activité grandit, votre site peut évoluer vers notre version Signature sans repartir de zéro.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-contact" id="contact">
+    <div class="container reveal">
+      <div class="contact-grid">
+        <div class="contact-intro">
+          <h2 class="section-title">Parlons de votre site.</h2>
+          <p class="section-lead">Deux minutes suffisent. Vous recevez une réponse sous 24&nbsp;h ouvrées, et l'échange ne vous engage à rien.</p>
+          <ol class="contact-steps">
+            <li><strong>Vous envoyez votre demande</strong><span>avec le formulaire ci-contre.</span></li>
+            <li><strong>On vous répond sous 24&nbsp;h ouvrées</strong><span>pour échanger sur votre métier et vos besoins.</span></li>
+            <li><strong>Votre site est en ligne en 48&nbsp;h</strong><span>après réception de vos éléments.</span></li>
+          </ol>
+          <p class="contact-alt">Vous préférez écrire directement&nbsp;? <a href="mailto:contact@impact-nva.fr" data-email-link data-email>contact@impact-nva.fr</a></p>
+        </div>
+        <form class="contact-form" id="contact-form" data-webhook="https://n8n.srv1677224.hstgr.cloud/webhook/nouveau-prospect" novalidate>
+          <input type="hidden" name="offre" value="V2 Prestige">
+          <p class="hp-field" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+          <div class="form-row">
+            <label for="f-entreprise">Votre entreprise <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-entreprise" name="entreprise" type="text" required autocomplete="organization" placeholder="Ex. : Martin Paysage">
+          </div>
+          <div class="form-row">
+            <label for="f-metier">Votre métier</label>
+            <select id="f-metier" name="domaine">
+              <option value="">Choisir…</option>
+              <option>Paysagiste</option>
+              <option>Élagueur</option>
+              <option>Entretien d'espaces verts</option>
+              <option>Jardinier</option>
+              <option>Autre métier</option>
+            </select>
+          </div>
+          <div class="form-duo">
+            <div class="form-row">
+              <label for="f-email">Votre email <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="vous@exemple.fr">
+            </div>
+            <div class="form-row">
+              <label for="f-tel">Votre téléphone</label>
+              <input id="f-tel" name="telephone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="f-ville">Votre ville</label>
+            <input id="f-ville" name="ville" type="text" autocomplete="address-level2" placeholder="Ex. : Annecy">
+          </div>
+          <div class="form-row">
+            <label for="f-message">Votre projet, en quelques mots</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Ex. : je n'ai pas encore de site, j'aimerais montrer mes chantiers et recevoir des demandes de devis."></textarea>
+          </div>
+          <button class="cta-button form-submit" type="submit">Envoyer ma demande</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-privacy">Vos informations servent uniquement à vous répondre. Elles ne sont ni revendues, ni partagées.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo-impact.png" alt="Impact-NVA" width="110" height="120" loading="lazy">
+      <p>Des sites internet haut de gamme pour les paysagistes et les métiers du végétal.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Navigation de bas de page">
+      <p class="footer-title">Explorer</p>
+      <ul>
+        <li><a href="#difference">La différence</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#deroule">Le déroulé</a></li>
+        <li><a href="#offre">L'offre</a></li>
+        <li><a href="#questions">Questions</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <p class="footer-title">Contact</p>
+      <p><a href="mailto:contact@impact-nva.fr" data-email-link data-email>contact@impact-nva.fr</a></p>
+      <p data-zone>France</p>
+    </div>
+  </div>
+  <div class="container footer-legal">
+    <p>© 2026 <span data-brand>Impact-NVA</span> — Tous droits réservés.</p>
+  </div>
 </footer>
-<script src="https://kit.fontawesome.com/08964c86dc.js" crossorigin="anonymous"></script>
-<script src="assets/js/main.js"></script></body></html>
+
+<script src="config.js" defer></script>
+<script src="js/config-apply.js" defer></script>
+<script src="assets/js/main.js?v=6" defer></script>
+</body>
+</html>

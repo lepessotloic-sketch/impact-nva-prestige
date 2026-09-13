@@ -1043,6 +1043,61 @@ html:not(.js) .theme-toggle { display: none; }
   font-size: .87rem;
 }
 
+/* Trois offres côte à côte, Prestige mise en avant */
+.offer-head { text-align: center; max-width: 46rem; margin-inline: auto; }
+.offer-head .section-lead { margin-inline: auto; }
+.offer-trio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  align-items: stretch;
+  margin-top: 2.6rem;
+}
+.offer-trio .offer-card { position: static; display: flex; flex-direction: column; }
+.offer-trio .offer-card:not(.offer-card-alt) { transform: translateY(-.7rem); box-shadow: var(--shadow-soft); }
+.offer-trio .offer-card-alt {
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(var(--line), var(--line)) border-box;
+}
+.offer-trio .offer-price .price-now { font-size: clamp(2.6rem, 4vw, 3.3rem); }
+.offer-for { color: var(--ink-2); font-size: .95rem; margin: 0 0 1.1rem; }
+.offer-trio .offer-terms-list { text-align: left; flex-grow: 1; }
+.offer-trio .offer-terms-list li {
+  position: relative;
+  padding: .45rem 0 .45rem 1.7rem;
+  border-bottom: 1px solid var(--line);
+}
+.offer-trio .offer-terms-list li::before {
+  content: '';
+  position: absolute;
+  left: .15rem;
+  top: .95rem;
+  width: 11px;
+  height: 6px;
+  border-left: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(-45deg);
+}
+.offer-trio .cta-button,
+.offer-trio .ghost-button { width: 100%; }
+.offer-after {
+  max-width: 52rem;
+  margin: 2.8rem auto 0;
+  padding: 1.6rem 1.8rem;
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+.offer-after-title { margin: 0 0 .8rem; color: var(--ink); }
+.offer-after-list { list-style: none; margin: 0 0 .8rem; padding: 0; color: var(--ink-2); font-size: .95rem; }
+.offer-after-list li { padding: .3rem 0; }
+.offer-after .offer-note { margin: 0; }
+@media (max-width: 900px) {
+  .offer-trio { grid-template-columns: 1fr; max-width: 30rem; margin-inline: auto; }
+  .offer-trio .offer-card:not(.offer-card-alt) { transform: none; }
+}
+
 /* ---------- FAQ ---------- */
 
 .section-faq { background: var(--bg); }

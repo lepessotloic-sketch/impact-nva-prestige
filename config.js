@@ -7,7 +7,7 @@ window.siteConfig = {
   email: "contact@impact-nva.fr",
   phone: "",
   zone: "France",
-  stripeCheckoutUrl: "https://buy.stripe.com/3cI8wO6QT6tj0T93FRbo401",
+  stripeCheckoutUrl: "https://buy.stripe.com/14A9AS1wz2d36dtgsDbo405",
 
   /* Statistiques affichées dans la section Réalisations.
      Laisser vide ([]) tant qu'il n'y a pas de vrais chiffres :

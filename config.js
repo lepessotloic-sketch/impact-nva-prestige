@@ -3,7 +3,7 @@
    sans toucher au design. */
 window.siteConfig = {
   brand: "Impact-NVA",
-  slogan: "Sites internet premium pour artisans",
+  slogan: "Sites internet sur-mesure pour paysagistes",
   email: "contact@impact-nva.fr",
   phone: "",
   zone: "France",

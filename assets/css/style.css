@@ -1405,3 +1405,10 @@ html.js .reveal.visible {
 
   .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
 }
+
+
+/* Case de demande de demo, dans les formulaires de contact. */
+.case-demo{display:flex;gap:10px;align-items:flex-start;margin:18px 0 6px;cursor:pointer;font-weight:400}
+.case-demo input{width:auto;margin:3px 0 0;flex:0 0 auto}
+.case-demo span{font-size:.92rem;line-height:1.5}
+.case-demo-note{margin:0 0 18px 28px;font-size:.82rem;opacity:.72}

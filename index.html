@@ -525,7 +525,7 @@
             <textarea id="f-message" name="message" rows="4" placeholder="Ex. : je n'ai pas encore de site, j'aimerais montrer mes chantiers et recevoir des demandes de devis."></textarea>
           </div>
           <label class="case-demo"><input type="checkbox" name="demo" value="oui" checked><span>Je veux ma démo offerte&nbsp;: mon futur site avec mon nom et mon logo, prêt sous 48&nbsp;h ouvrées, avant tout paiement</span></label><p class="case-demo-note">Vous pourrez nous envoyer votre logo et vos photos de chantiers en réponse à notre message.</p>
-          <button class="cta-button form-submit" type="submit">Envoyer ma demande</button>
+          <!-- Turnstile : cle de SITE, publique par nature, elle doit etre lisible ici. La cle SECRETE ne vit que dans le credential n8n "Impact-NVA - Turnstile secret". refresh-expired/timeout : Turnstile refabrique le jeton tout seul, un jeton ne vaut que 300 s. --><div class="cf-turnstile" id="verif" data-sitekey="0x4AAAAAAF8Fa2WBlUY8qKIa" data-theme="auto" data-refresh-expired="auto" data-refresh-timeout="auto"></div><button class="cta-button form-submit" type="submit">Envoyer ma demande</button>
           <p class="form-status" role="status" aria-live="polite"></p>
           <p class="form-privacy">Vos informations servent uniquement à vous répondre. Elles ne sont ni revendues, ni partagées.</p>
         </form>
@@ -564,6 +564,6 @@
 
 <script src="config.js" defer></script>
 <script src="js/config-apply.js" defer></script>
-<script src="assets/js/main.js?v=6" defer></script>
+<!-- Turnstile : verification anti-robot. Le script doit venir de cette URL exacte (doc Cloudflare). --><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script><script src="assets/js/main.js?v=6" defer></script>
 </body>
 </html>

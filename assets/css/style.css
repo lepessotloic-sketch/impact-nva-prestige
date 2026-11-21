@@ -1412,3 +1412,7 @@ html.js .reveal.visible {
 .case-demo input{width:auto;margin:3px 0 0;flex:0 0 auto}
 .case-demo span{font-size:.92rem;line-height:1.5}
 .case-demo-note{margin:0 0 18px 28px;font-size:.82rem;opacity:.72}
+
+/* 21/11/2026 */
+.partners-domaine{margin:1.4rem 0 0;color:var(--ink-3);font-size:.9rem}
+.footer-legal a,.footer-bottom a{color:inherit;text-decoration:underline}
